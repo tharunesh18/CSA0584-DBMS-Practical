@@ -1,0 +1,17 @@
+USE school_db;
+
+INSERT INTO faculty (faculty_id, faculty_name, budget, established_year)
+VALUES (2, 'Science Faculty', 400000.00, 2005);
+
+INSERT INTO faculty (faculty_id, faculty_name, budget, established_year)
+VALUES
+ (3, 'Arts Faculty', 300000.00, 1990),
+ (4, 'Business Faculty', 450000.00, 2010);
+
+INSERT INTO students (name, email, faculty_id, admission_date, age)
+VALUES ('Ravi', 'ravi@example.com', 2, CURDATE(), 20);
+
+SELECT * FROM students;
+
+SELECT * FROM students
+WHERE age >= 21 AND faculty_id = 1;
